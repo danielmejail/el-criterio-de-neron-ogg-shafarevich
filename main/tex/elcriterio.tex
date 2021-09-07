@@ -1,0 +1,202 @@
+\begin{propoTorsionNoRamificada}\label{propo:torsionnoramificada}
+	Sea $E/\cal K$ una curva el\'{\i}ptica tal quje los grupos de $m$-%
+	torsi\'{o}n $E[m]$ son no ramificados para una cantidad infinita de
+	enteros $m\geq 1$ y coprimos con $\char k$. Entonces
+	$E$ tiene buena reducci\'{o}n.
+\end{propoTorsionNoRamificada}
+
+\begin{proof}
+	Se tienen dos sucesiones exactas cortas de grupos
+	\begin{center}
+		\begin{tikzcd}
+			0\arrow[r] & E_0\arrow[r] & E\arrow[r] &
+				E/E_0\arrow[r] & 0 \quad\text{y} \\
+			0\arrow[r] & E_1\arrow[r] & E_0\arrow[r] &
+				\redns{E}\arrow[r] & 0
+		\end{tikzcd}
+	\end{center}
+	Si $\closnr{\cal K}$ es la extensi\'{o}n no ramificada maximal de
+	$\cal K$ en $\clos{\cal K}$, el cuerpo residual de $\closnr{\cal K}$ es
+	$\clos k$. Usando la de modelos de N\'{e}ron para una curva
+	el\'{\i}ptica, ``esquemas en grupos con fibra geom\'{e}trica $E/k$'',
+	se puede decir lo siguiente:
+	\begin{itemize}
+		\item[(i)] Si $E/\cal K$ tiene reducci\'{o}n split
+			multiplicativa, entonces $E(\cal K)/E_0(\cal K)$ es
+			c\'{\i}clico de orden $v(\discriminante)$;
+		\item[(ii)] en cualquier otro caso, dicho cociente es un grupo
+			finito de orden, a lo sumo, $4$.
+	\end{itemize}
+	%
+	Algo de esto se hab\'{\i}a demostrado en clase, pero la
+	demostraci\'{o}n se basaba en la finitud del cuerpo residual, que,
+	ciertamente, no se cumple para $\closnr{\cal K}$. Bajo las
+	hip\'{o}tesis de la proposici\'{o}n, se puede deducir que existe un
+	(existen infinitos) enteros $m\geq 1$ que cumple(n) simult\'{a}neamente
+	con:
+	\begin{itemize}
+		\item[(i)] $(m,\char k)=1$,
+		\item[(ii)]
+			\begin{math}
+				m>\#\big(E(\closnr{\cal K})/
+					E_0(\closnr{\cal K})\big)
+			\end{math} y
+		\item[(iii)] $E[m]$ es no ramificado.
+	\end{itemize}
+	%
+	En particular, la $m$-torsi\'{o}n est\'{a} contenida en
+	$E(\closnr{\cal K})$ y $E(\closnr{\cal K})$ contiene un subgrupo $A$
+	isomorfo a $\big(\bb Z/m\bb Z\big)^2$. Ahora bien,
+	\begin{align*}
+		E_0(\closnr{\cal K})\,\cap\,A & \,\leq\, A\,\simeq\,
+			\bb Z/m\bb Z\times\bb Z/m\bb Z
+		\text{ ,}
+	\end{align*}
+	%
+	lo que implica que
+	\begin{align*}
+		E_0(\closnr{\cal K})\,\cap\,A & \,\simeq\,
+			\bb Z/a\bb Z\times\bb Z/b\bb Z
+		\text{ ,}
+	\end{align*}
+	%
+	con $a,b\mid m$. Adem\'{a}s,
+	\begin{align*}
+		E(\closnr{\cal K})/E_0(\closnr{\cal K}) & \,\supset\,
+			E_0(\closnr{\cal K})\cdot A/E_0(\closnr{\cal K})
+			\,\simeq\,A/E_0(\closnr{\cal K})\cap A
+		\text{ .}
+	\end{align*}
+	%
+	As\'{\i}, $m>\frac{m^2}{ab}$, lo quje fuerza que exista un primo $l$
+	que divida tanto a $a$ como a $b$. En definitiva, existe un subgrupo
+	$B$ de $E_0(\closnr{\cal K})$ isomorfo a $\big(\bb Z/l\bb Z\big)^2$.
+	Usando
+	\begin{center}
+		\begin{tikzcd}
+			0\arrow[r] & E_1(\closnr{\cal K})\arrow[r] &
+				E_0(\closnr{\cal K})\arrow[r] &
+				\redns{E}(\clos k)\arrow[r] & 0
+			\text{ ,}
+		\end{tikzcd}
+	\end{center}
+	que $l\not =\char k$ y que $E_1(\closnr{\cal K})$ no tiene puntos de
+	orden $l$,
+	\begin{align*}
+		E_1(\closnr{\cal K})\,\cap\,B & \,=\,1
+		\text{ ,}
+	\end{align*}
+	%
+	y, entonces, este grupo pasa a la curva reducida, a sus puntos no
+	singulares. Ahora, si $E$ tuviese mala reducci\'{o}n, habr\'{\i}a dos
+	posibilidades:
+	\begin{itemize}
+		\item[(i)] $\redns{E}(\clos k)\simeq\clos k^\times$
+			(red. mult.), o bien
+		\item[(ii)] $\redns{E}(\clos k)\simeq (\clos k,+)$ (red. ad.).
+	\end{itemize}
+	%
+	El segundo caso no es viable, porque no hay $l$-torsi\'{o}n en
+	$(\clos k,+)$. Por otra parte, en $\clos k^\times$, la $l$-torsi\'{o}n
+	consiste en las ra\'{\i}ces $l$-\'{e}simas de la unidad en $\clos k$, y
+	\'{e}stas constituyen un grupo c\'{\i}clico de orden $l$. La primera de
+	las opciones, tampoco es posible. En consecuencia, $E/\closnr{\cal K}$
+	tiene buena reducci\'{o}n. Como bajo toda extensi\'{o}n no ramificada,
+	el tipo de reducci\'{o}n se preserva, $E$ tampoco tiene mala
+	reducci\'{o}n sobre $\cal K$.
+\end{proof}
+
+\begin{teoNOS}\label{thm:NOS}
+	Las siguientes son equivalentes:
+	\begin{itemize}
+		\item[(i)] $E$ tiene buena reducci\'{o}n;
+		\item[(ii)] $E[m]$ es no ramificado para todo $m\geq 1$ coprimo
+			con $\char k$;
+		\item[(iii)] $\tate[l](E)$ es no ramificado para (alg\'{u}n)
+			primo $l$ coprimo con $\char k$;
+		\item[(iv)] $E[m]$ es no ramificado para infinitos enteros
+			$m\geq 1$ coprimos con $\char k$.
+	\end{itemize}
+	%
+\end{teoNOS}
+
+\'{E}ste es el \emph{criterio de N\'{e}ron-Ogg-Shafarevich}. Este ``criterio''
+se puede ver desde el lado de las representaciones.
+
+Sea $E/\bb Q$ una curva el\'{\i}ptica dada por ecuaci\'{o}n de Weierstrass,
+\eqref{eq:formadeweierstrass}, con $a_i\in\bb Q$. Haciendo cambios de variable
+de la forma
+\begin{align*}
+	(x,y) & \,=\,(u^2x',u^3y')
+	\text{ ,}
+\end{align*}
+%
+se obtiene una nueva ecuaci\'{o}n con coeficientes
+\begin{align*}
+	a_i' & \,=\, a_i/u^i
+	\text{ .}
+\end{align*}
+%
+(Se puede llevar a una ecuaci\'{o}n con coeficientes enteros). Sea $m_p(E)$ la
+menor potencia de $p$ que divide al discriminante $\Delta$ de alguna de las
+ecuaciones con coeficientes enteros equivalente a la ecuaci\'{o}n que define a
+$E$ --dos ecuaciones se dicen \emph{equivalentes}, si est\'{a}n relacionadas
+por un cambio de variables ``admisible''. Se define el \emph{discriminante %
+global de $E$} como
+\begin{align*}
+	\mindisc(E) & \,:=\,\prod_p\,p^{m_p(E)}
+\end{align*}
+%
+(si $p\nmid\discriminante(E)$, entonces $m_p(E):=0$). Es posible llevar la
+ecuaci\'{o}n de $E$, v\'{\i}a cambios de variable admisibles, a una cuyo
+discriminante minimice todas las valuaciones, es decir, existe una ecuaci\'{o}n
+equivalente $E'$ tal que
+\begin{math}
+	m_p(E)=v_p(\discriminante(E'))
+\end{math}. As\'{\i}, $\discriminante(E')=\mindisc(E)$. Una ecuaci\'{o}n $E'$
+con estas caracter\'{\i}sticas se denomina \emph{ecuaci\'{o}n de Weierstrass %
+minimal global}.
+
+Sea $N$ el conductor de $E$, divisible exactamente por los primos de mala
+reducci\'{o}n. Dado un primo $l$, el m\'{o}dulo de Tate $\tate[l](E)$
+proporciona una representaci\'{o}n de
+\begin{math}
+	G=\galois{\clos{\bb Q}/\bb Q}
+\end{math}, un morfismo continuo
+\begin{align*}
+	\rho & \,=\,\rho_{E,l} \,:\,G\,\rightarrow\,\GL[2](\bb Z_l)\,\subset\,
+		\GL[2](\bb Q_l)
+	\text{ .}
+\end{align*}
+%
+Sea $p\in\bb Z$ un primo arbitrario y sea $\frak p\subset\clos{\bb Z}$ primo
+maximal arriba de $p$ ($\frak p=\ker(\clos{\bb Z}\rightarrow\clos{\bb F_p})$).
+Se definen
+\begin{align*}
+	\descomp[\frak p] & \,:=\,\big\{\sigma\in G\,:\,
+		\frak p^\sigma=\frak p\big\} \quad\text{e} \\
+	\inercia[\frak p] & \,:=\,\big\{\sigma\in D_{\frak p}\,:\,
+		x^\sigma \equiv x\,(\modulo\,\frak p)\,\forall x\in\clos{\bb Z}
+		\big\}
+	\text{ ,}
+\end{align*}
+%
+respectivamente, el \emph{grupo de descomposici\'{o}n de $\frak p$} y el
+\emph{subgrupo de inercia}. Alternativamente, $\inercia[\frak p]$ se puede
+describir como el n\'{u}cleo de un morfismo sobreyectivo
+\begin{math}
+	\descomp[\frak p]\rightarrow\galois{\clos{\bb F_p}/\bb F_p}
+\end{math}. Sea $\sigma_p:\,x\mapsto x^p$ y se
+$\frob[\frak p]\in\descomp[\frak p]$ cualquier preimagen de $\sigma_p$ por este
+morfismo sobre.
+
+Una representaci\'{o}n $\rho:\,G\rightarrow\GL[d](L)$ (morfismo continuo,
+$d\geq 1$, $L/\bb Q_l$ extensi\'{o}n finita) se dice \emph{no ramificada en %
+$p$}, si $\inercia[\frak p]\subset\ker(\rho)$, cualquiera sea $\frak p$ arriba
+de $p$. Entonces, usando esta terminolog\'{\i}a, el criterio de
+N\'{e}ron-Ogg-Shafarevich, Teorema~\ref{thm:NOS}, dice que
+
+\begin{teoNOS}\label{thm:NOSbis}
+	la rep. $\rho_{E,l}$ es no ramificada en todo primo $p$
+	que no divide a $l\cdot N$.
+\end{teoNOS}

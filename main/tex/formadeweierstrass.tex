@@ -1,0 +1,58 @@
+Sea $\cal{K}$ un cuerpo completo respecto de una valuaci\'{o}n discreta $v$ y
+sean $\cal{R}=\{v\geq 0\}$ y $\cal{M}=\{v>0\}$ su anillo de enteros y el ideal
+maximal del mismo, respectivamente. Sea $\pi$ un generador de $\cal{M}$ y sea
+$k=\cal{R}/\cal{M}$ el cuerpo residual. Sea $E/\cal{K}$ una curva el\'{\i}ptica
+sobre $\cal{K}$ dada por ecuaci\'{o}n de Weierstrass:
+\begin{equation}
+	\label{eq:formadeweierstrass}
+	E \,:\,y^{2} +a_{1}xy +a_{3}y \,=\,x^{3} +a_{2}x^{2} +a_{4}x +a_{6}
+	\text{ .}
+\end{equation}
+%
+V\'{\i}a un cambio de variables ($(x,y)=(u^{2}x',u^{3}y')$,
+$a_{i}'=a_{i}/u^{i}$), \eqref{eq:formadeweierstrass} se puede llevar a una
+ecuaci\'{o}n con coeficientes en $\cal{R}$. El discriminante $\Delta$
+ser\'{\i}a, entonces, un elemento de $\cal{R}$, de valuaci\'{o}n no negativa.
+Como $v$ es una valuaci\'{o}n discreta, se deduce que existe una ecuaci\'{o}n
+de la forma \eqref{eq:formadeweierstrass} con $v(\Delta)$ m\'{\i}nimo para la
+curva $E$.
+
+Se puede demostrar que una ecuaci\'{o}n con coeficientes en el anillo $\cal{R}$
+es minimal en este sentido, si vale que $v(\Delta)<12$, $v(c_{4})<4$ y (?`o?)
+$v(c_{6})<6$, donde $c_{4}$, $c_{6}$ y $\Delta$ se calculan a partir de los
+coeficientes $a_{i}$ utilizando las expresiones:
+\begin{equation}
+	\label{eq:definiciondeloscoeficientes}
+	\begin{aligned}
+		b_{2} & \,=\, a_{1}^{2}+4a_{4} \text{ ,} \\
+		b_{4} & \,=\, 2a_{4}+a_{1}a_{3}\text{ ,} \\
+		b_{6} & \,=\, a_{3}^{2}+4a_{6} \text{ ,} \\
+		b_{8} & \,=\, a_{1}^{2}a_{6}+4a_{2}a_{6}-a_{1}a_{3}a_{4}+
+			a_{2}a_{3}^{2}-a_{4}^{3} \text{ ,} \\
+		c_{4} & \,=\, b_{2}^{2} +24b_{4} \text{ ,} \\
+		c_{6} & \,=\,-b_{2}^{3}+36b_{2}b_{4}-216b_{6} \text{ ,} \\
+		\Delta & \,=\,-b_{2}^{2}b_{8}-8b_{4}^{3}-27b_{6}^{2}+
+			9b_{2}b_{4}b_{6}
+		\text{ .}
+	\end{aligned}
+\end{equation}
+%
+Se cumple que
+\begin{equation}
+	\label{eq:relacionesentrecoeficientes}
+	\begin{aligned}
+		4b_{8} & \,=\,b_{2}b_{6}-b_{4}^{2} \quad\text{y} \\
+		1728\cdot \Delta & \,=\,c_{4}^{3} -c_{6}^{2}
+		\text{ .}
+	\end{aligned}
+\end{equation}
+%
+Finalmente, recordamos que una ecuaci\'{o}n de Weierstrass es minimal para la
+curva $E$ es \'{u}nica, salvo cambio de coordenadas de la forma
+\begin{align*}
+	(x,y) & \,=\,(u^{2}x'+r,u^{3}y'+u^{2}x's+t)
+	\text{ ,}
+\end{align*}
+%
+donde $u\in\cal{R}^{\times}$ es una unidad y $r,s,t\in\cal{R}$ son arbitrarios.
+

@@ -1,0 +1,82 @@
+Sea $\clos{\cal{K}}/\cal{K}$ una clausura algebraica de $\cal{K}$ y sea
+$\closnr{\cal{K}}/\cal{K}$ la m\'{a}xima extensi\'{o} no ramificada en
+$\clos{\cal{K}}$ ($\pi\in\cal{K}$ es generador de $\cal{M}$ y tambi\'{e}n
+genera el ideal maximal en el anillo de enteros de $\closnr{\cal{K}}$). Sean
+$G=\galois{\clos{\cal{K}}/\cal{K}}$ e
+$I_{v}\equiv I:=\galois{\clos{\cal{K}}/\closnr{\cal{K}}}$ el \emph{subgrupo %
+de inercia} ($I\triangleleft G$). Hay una correspondencia entre extensiones no
+ramificadas de $\cal{K}$ y  extensiones de su cuerpo residual $k$. En
+particular, el cuerpo residual de $\closnr{\cal{K}}$ es $\clos{k}$, una
+clausura de $k$.
+
+El grupo de Galois $G$ act\'{u}a sobre los puntos de $m$-torsi\'{o}n $E[m]$,
+para cada $m$ y sobre los \emph{m\'{o}dulos de Tate}
+\begin{equation}
+	\label{eq:modulodetate}
+	\tate[l](E) \,:=\,\limproy\,E[l^r]
+	\text{ ,}
+\end{equation}
+%
+para cada $l$.
+
+\begin{propoAccionDeInercia}\label{propo:acciondeinercia}
+	Sea $E/\cal{K}$ una curva el\'{\i}ptica con buena reducci\'{o}n
+	($\reducido{E}/k$ no singular). Sean $m,l\geq 1$ enteros coprimos con
+	$\char{k}$, con $l$ primo. Entonces
+	\begin{itemize}
+		\item[(i)] el grupo $I_{v}$ act\'{u}a trivialmente sobre
+			$E[m]$ y
+		\item[(ii)] la acci\'{o}n de $I_{v}$ sobre $\tate[l](E)$ es
+			trivial.
+	\end{itemize}
+	%
+\end{propoAccionDeInercia}
+
+\begin{defConjuntoNoRamificado}\label{def:conjuntonoramificado}
+	Sea $\Sigma$ un conjunto sobre el cual $G$ act\'{u}a
+	($\rho:\,G\rightarrow\Auto(\Sigma)$). Si la acci\'{o}n del subgrupo de
+	inercia es trivial ($I_{v}\subset\ker(\rho)$), se dice que
+	\emph{$\Sigma$ es no ramificado (en $v$)}.
+\end{defConjuntoNoRamificado}
+
+\begin{proof}[Demostraci\'{o}n (de \ref{propo:acciondeinercia})]
+	El \'{\i}tem (ii) se deduce de (i). Para demostrar (i), supongamos que
+	$\cal{K}'/\cal{K}$ es una extensi\'{o}n (finita) que contiene a toda la
+	$m$-torsi\'{o}n/ Si la ecuaci\'{o}n que define a $E$ est\'{a} en forma
+	de Weierstrass (y es minimal), como la curva tiene buena reducci\'{o}n,
+	tiene que ser $v_{\cal{K}}(\Delta)=0$. Como el grado de $\cal{K}'$
+	sobre $\cal{K}$ es finito,
+	\begin{align*}
+		v_{\cal{K}'}(\Delta) & \,=\,e\cdot v_{\cal{K}}(\Delta)\,=\,0
+	\end{align*}
+	%
+	Como los coeficientes de la ecuaci\'{o}n para $E$ pertenecen a
+	$\cal{R}'$, la misma es una ecuaci\'{o}n minimal sobre $\cal{K}'$.
+	Adem\'{a}s, la curva $E/\cal{K}'$ tiene buen a reducci\'{o}n, con lo
+	que $\reducido{E}/k'$ es no singular y
+	\begin{equation}
+		\label{eq:inclusionmtorsionreducida}
+		E[m] \,=\,E(\cal{K}')[m]\,\hookrightarrow\,
+			\reducido{E}(k')
+		\text{ .}
+	\end{equation}
+	%
+	Sea $P\in E[m]$ y sea $\sigma\in I$. Se tiene que
+	\begin{align*}
+		[m]\,\big(P^{\sigma}-P\big) & \,=\,([m]\,P)^{\sigma}-[m]\,P
+			\,=\,0
+		\text{ ,}
+	\end{align*}
+	%
+	lo que implica $P^{\sigma}-P\in E[m]$. Ahora,
+	\begin{align*}
+		\reducido{P^{\sigma}-P} & \,=\,
+			\reducido{P}^{\sigma}-\reducido{P} \,=\,0
+		\text{ ,}
+	\end{align*}
+	%
+	pues $I$ act\'{u}a trivialmente en $\reducido{E}(k')$ (por
+	definici\'{o}n). La inclusi\'{o}n \eqref{eq:inclusionmtorsionreducida},
+	implica, finalmente, que $P^{\sigma}=P$.
+\end{proof}
+

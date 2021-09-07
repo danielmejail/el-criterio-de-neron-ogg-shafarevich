@@ -1,0 +1,66 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+
+%Page dimensions
+\usepackage{geometry}
+\geometry{a4paper}
+
+\usepackage{graphicx}
+
+%More packages
+
+\usepackage[
+	backend=biber,
+	style=numeric,
+	citestyle=numeric,
+	sorting=nyt,
+	isbn=false,
+	doi=false,
+	related=false,
+	giveninits=true
+]{biblatex}
+\renewbibmacro{in:}{%
+	\ifentrytype{article}{}{\printtext{\bibstring{in}\intitlepunct}}}
+\AtEveryBibitem{\clearlist{language}}
+\addbibresource{./biblio.bib}
+\nocite{*}
+
+\usepackage{formato_general}
+\usepackage{abreviaciones}
+\usepackage{nombres}
+
+\title{El criteio de N\'{e}ron-Ogg-Shafarevich}
+\author{}
+\date{2021} % Activate to display a given date or no date (if empty),
+	% otherwise the current date is printed
+
+\begin{document}
+\renewcommand{\refname}{Referencias}
+\maketitle
+\tableofcontents
+
+%--------
+\input{./tex/teoremas.tex}
+\section*{\null}
+\input{./tex/intro.tex}
+
+\section{Forma de Weierstrass}\label{sec:formadeweierstrass}
+\input{./tex/formadeweierstrass.tex}
+
+\section{Reducci\'{o}n}\label{sec:reduccion}
+\input{./tex/reduccion.tex}
+
+\section{Inercia}\label{sec:inercia}
+\input{./tex/inercia.tex}
+
+\section{El criterio}\label{sec:elcriterio}
+\input{./tex/elcriterio.tex}
+
+\section{Comentarios}\label{sec:comentarios}
+\input{./tex/comentarios.tex}
+
+%--------
+
+\printbibliography[heading=bibintoc,title=\refname]
+
+\end{document}

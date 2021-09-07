@@ -1,0 +1,218 @@
+Si $E/\cal{K}$ viene dada por una ecuaci\'{o}n minimal y $P\in\bb{P}^{2}(K)$,
+se pueden hallar coordenadas homog\'{e}neas $P=[x_{0}:x_{1}:x_{2}]$, con
+$x_{i}\in\cal{R}$ y, al menos, una en $\cal{R}^{\times}$. Se definen, entonces,
+los conjuntos
+\begin{align*}
+	E_{0}(\cal{K}) & \,:=\,\big\{P\in E(\cal{K})\,:\,
+		\reducido{P}\in\redns{E}(k)\big\} \quad\text{y} \\
+	E_{1}(\cal{K}) & \,:=\,\big\{P\in E(\cal{K})\,:\,
+		\reducido{P}=O\big\}
+	\text{ .}
+\end{align*}
+%
+Estos conjuntos son, en realidad, grupos y existe una sucesi\'{o}n exacta corta
+\begin{center}
+	\begin{tikzcd}
+		0\arrow[r] & E_{1}(\cal{K})\arrow[r] &
+			E_{0}(\cal{K})\arrow[r] & \redns{E}(k)\arrow[r] & 0
+	\end{tikzcd}
+\end{center}
+Se hab\'{\i}a visto en clase para $\cal{K}=\bb{Q}_{p}$, pero los argumentos
+valen en general.
+
+Otra cosa que se hab\'{\i}a visto en clase fue que, para $n\geq 1$ el conjunto
+\begin{align*}
+	E_{n}(\cal{K}) & \,:=\,\big\{P\in E_{1}(\cal{K})\,:\,
+		v(x(P))/v(y(P))\geq n\big\}\,\cup\,\{O\}
+\end{align*}
+%
+es un subgrupo de $E_{1}(\cal{K})$ y se cumple:
+\begin{itemize}
+	\item[(i)]
+		\begin{math}
+			E_{n}(\cal{K})/E_{n+1}(\cal{K})\simeq (k,+)
+		\end{math}~y
+	\item[(ii)]
+		\begin{math}
+			\bigcap_{n\geq 1}\,E_{n}(\cal{K})=\{O\}
+		\end{math}~.
+\end{itemize}
+%
+El iso viene dado por $E_{u}(\cal{K})\xrightarrow{\phi_{u}}k$, donde
+\begin{align*}
+	&
+	\begin{cases}
+		\phi_{u}(x,y) \,=\,\pi^{-u}x/y \\
+		\phi_{u}(O) \,=\,0
+	\end{cases}
+\end{align*}
+%
+
+\begin{propoReduccionYTorsion}\label{propo:reduccionytorsion}
+	Sea $m\in\bb{Z}$ coprimo con $\char k$. Entonces
+	\begin{itemize}
+		\item[(i)] $E_{1}(\cal{K})$ no tiene puntos de $m$-torsi\'{o}n
+			y
+		\item[(ii)] si $\reducido{E}$ es no singular,
+			$E(\cal{K})[m]\hookrightarrow\reducido{E}(k)$.
+	\end{itemize}
+	%
+\end{propoReduccionYTorsion}
+
+\begin{proof}
+	Sea $P\in E(\cal{K})[m]$ y supongamos que $P\in E_{n}(\cal{K})$.
+	Entonces $[m]\cdot P=O$ y, en particular,
+	\begin{align*}
+		m\,\phi_{n}(P) & \,=\,\phi_{n}([m]\cdot P)\,=\,0
+		\text{ .}
+	\end{align*}
+	%
+	Como $\char k\nmid m$, $m\in k^{\times}$ y $\phi_{n}(P)=0$. Esto quiere
+	decir que $P\in E_{n+1}(\cal{K})$. En particular, por inducci\'{o}n,
+	$E_{1}(\cal{K})$ no tiene puntos de $m$-torsi\'{o}n. Para la segunda
+	parte, el n\'{u}cleo de la reduci\'{o}n es $E_{1}(\cal{K})$, pero
+	$E(\cal{K})[m]\cap E_{1}(\cal{K})=\{O\}$.
+\end{proof}
+
+\begin{defReduccion}\label{def:reduccion}
+	Sea $E/\cal{K}$ una curva el\'{\i}ptica dada por ecuaci\'{o}n minimal.
+	Se dice que la curva (i) \emph{tiene buena reducci\'{o}n}, si
+	$\reducido E(k)$ es no singular; (ii) \emph{tiene reducci\'{o}n %
+	multiplicativa}, si la curva reducida es \emph{nodal}; (iii)
+	\emph{tiene reducci\'{o}n aditiva}, si la curva reducida es
+	\emph{cuspidal}. Cuando la reducci\'{o}n es multiplicativa, se dice,
+	adem\'{a}s, que es (a) \emph{split}, si las pendientes de las
+	tangentes a $\reducido E(k)$ en el nodo est\'{a}n definidas sobre $k$;
+	(b) \emph{non-split}, en caso contrario.
+\end{defReduccion}
+
+\begin{obsReduccion}\label{obs:reduccion}
+	Una curva dada por ecuaci\'{o}n de Weierstrass es no singular, si y
+	s\'{o}lo si su discriminante es no nulo. En caso contrario, tiene un
+	nodo, si ($\Delta=0$ y) $c_{4}\not=0$, y el punto singular es una
+	c\'{u}spide, si ($\Delta=0$ y) $c_{4}=0$.
+
+	La curva $E/\cal{K}$ tiene vuena reducci\'{o}n, si y s\'{o}lo si
+	$v(\Delta)>0$ (equivalentemente,
+	$\Delta\in\cal{R}\setmin\cal{M}=\cal{R}^{\times}$).
+	Si $\Delta\equiv 0\,(\modulo\,\cal{M})$, entonces la reducci\'{o}n es
+	multiplicativa, si $v(c_{4})=0$ y es aditiva, si $v(c_{4})>0$.
+\end{obsReduccion}
+
+\begin{defReduccion}\label{def:reduccionpotencialmentebuena}
+	Se dice que $E/\cal{K}$ tiene \emph{mala reducci\'{o}n potencialmente %
+	buena}, si, vista como una curva sobre $\cal{K}'/\cal{K}$, alguna
+	extensi\'{o}n finita, tiene buena reducci\'{o}n.
+\end{defReduccion}
+
+\begin{propoReduccionBuenaYMala}\label{propo:reduccionbuenaymala}
+	Sea $E/\cal{K}$ una curva el\'{\i}ptica y sea $\cal{K}'/\cal{K}$ una
+	extensi\'{o}n de cuerpos.
+	\begin{itemize}
+		\item[(i)] Si la extensi\'{o}n es no ramificada, es decir,
+			$[\cal{K}':\cal{K}]=[k':k]$, o, equivalentemente,
+			$\cal{R}'\pi=\cal{M}'$, entonces el tipo de
+			reducci\'{o}n de $E$ en tanto curva sobre $\cal{K}'$ es
+			el mismo que en tanto curva sobre $\cal{K}$;
+		\item[(ii)] si $\cal{K}'/\cal{K}$ es finita y la reducci\'{o}n
+			de $E$ sobre $\cal{K}$ es buena, o bien mala y
+			multiplicativa, entonces la reducci\'{o}n sobre
+			$\cal{K}'$ es buena, o, respectivamente, mala y
+			multiplicativa;
+		\item[(iii)] en cualquier caso, existe $\cal{K}'/\cal{K}$
+			finita tal que $E/\cal{K}'$ tiene reducci\'{o}n buena o
+			bien split multiplicativa;
+		\item[(iv)] la reducci\'{o}n es potencialmete buena, si y
+			s\'{o}lo si $j(E)\in\cal{R}$.
+	\end{itemize}
+	%
+\end{propoReduccionBuenaYMala}
+
+\begin{proof}
+	Los items (i) y (ii) se desprenden de la minimalidad de la ecuaci\'{o}n
+	que define a $E$, de que $v'|_{\cal{K}}=v$, si $\cal{K}'/\cal{K}$ es no
+	ramificada, y de que $v'|_{\cal{K}}$ es un m\'{u}ltiplo no nulo de $v$
+	en el caso finito, haciendo cambios de variable que preserven la forma
+	de Weierstrass. Para ver (iii), asumiendo caracter\'{\i}stica distinta
+	de $2$, en cierta extensi\'{o}n finita $\cal{K}'/\cal{K}$, la curva
+	$E/\cal{K}'$ se puede expresar en forma de Legendre:
+	\begin{align*}
+		E & \,:\, y^2 \,=\,x\,(x-1)\,(x-\lambda)
+		\text{ ,}
+	\end{align*}
+	%
+	con $\lambda\not=0,1$. Entonces
+	\begin{align*}
+		c_{4}\,=\,16\,(\lambda^{2}-\lambda+1) & \quad\text{y}\quad
+		\Delta \,=\,16\,\lambda^{2}\,(\lambda-1)^{2}
+		\text{ .}
+	\end{align*}
+	%
+	\begin{itemize}
+		\item[(i)] Si $\lambda\in\cal{R}'$ y $\lambda\not=0,1$ en $k'$,
+			entonces $\Delta\not\equiv0\,(\modulo\,\cal{M}')$ y
+			$\Delta\in{\cal{R}'}^{\times}$;
+		\item[(ii)] si $\lambda =0$ o $\lambda=1$ en $k'$,
+			$\Delta\equiv0\,(\modulo\,\cal{M})$, pero
+			$c_4\in{\cal{R}'}^{\times}$;
+		\item[(iii)] si $\lambda\not\in {\cal{R}'}^{\times}$, pasa a
+			ser una unidad en $\cal{R}'$, si se lo multiplica por
+			alguna potencia positiva del uniformizadr $\pi'$.
+	\end{itemize}
+	%
+	Se hace el cambio $x=x'{\pi'}^{-r}$, $y=y'{\pi'}^{-3r/2}$, donde
+	$r$ es tal que $\lambda{\pi'}^{r}\in{\cal{R}'}^{\times}$. Reemplazando,
+	posiblemente, $\cal{K}'$ por una extensi\'{o}n cuadr\'{a}tica,
+	\begin{align*}
+		{y'}^{2}{\pi'}^{-3r} & \,=\,x'{\pi'}^{-r}\,
+			(x'{\pi'}^{-r}-1)\,(x'{\pi'}^{-r}-\lambda)
+			\quad\text{o bien,} \\
+		{y'}^{2} & \,=\,x'\,(x'-{\pi'}^{r})\,(x'-\lambda{\pi'}^{r})
+		\text{ .}
+	\end{align*}
+	%
+	Si $\Delta'=u^{-12}\Delta$ y $c_4'=u^{-4}c_4$ son los valores asociados
+	a esta ecuaci\'{o}n, entonces $\Delta'\in\cal{M}'$ y
+	$c_4'\in{\cal{R}'}^{\times}$. En (i) la reducci\'{o}n es buena, en
+	(ii) es multiplicativa y en (iii) es multiplicativa en una
+	extensi\'{o}n, a lo sumo, cuadr\'{a}tica de $\cal{K}'$. Por otro lado,
+	reducci\'{o}n non-split pasa a ser split en alguna extensi\'{o}n
+	cuadr\'{a}tica.
+
+	Para (d), asumiendo de nuevo $\char{k}\not=2$ y llevando la curva a
+	forma de Legendre, se puede verificar que
+	\begin{align*}
+		256\,(1-\lambda\,(1-\lambda))^{3}-
+			j\,\lambda^{2}\,(1-\lambda)^{2} & \,=\,0
+		\text{ .}
+	\end{align*}
+	%
+	En particular, $v(\lambda\,(1-\lambda))\geq0$. Si $v(\lambda)<0$,
+	entonces
+	\begin{math}
+		v(\lambda\,(1-\lambda))=v(\lambda)+v(1-\lambda)=
+			v(\lambda)+v(\lambda)<0
+	\end{math}~, lo que es absurdo. Entonces
+	\begin{align*}
+		v(\lambda) & \,\geq\,0
+		\text{ .}
+	\end{align*}
+	%
+	Como $256$ es una unidad en $\cal{R}$, reduciendo, tiene que ser
+	$\lambda\not\equiv0,1\,(\modulo\,\cal{M})$, y la reducci\'{o}n es
+	buena.
+
+	Si, rec\'{\i}procamente, la reducci\'{o}n es potencialmente buena, y
+	buena sobre una extensi\'{o}n finita $\cal{K}'/\cal{K}$, denotando con
+	$\Delta'$ el discriminante minimal de $E/\cal{K}'$ y $c_4'$ el otro
+	valor asociado a la ecuaci\'{o}n minimal, se deduce que
+	\begin{align*}
+		j(E/\cal{K}') & \,=\,{c_4'}^{3}/\Delta'
+		\text{ .}
+	\end{align*}
+	%
+	Como $c_4'\in\cal{R}'$ y la reducci\'{o}n es buena sobre $\cal{K}'$, el
+	discriminante minimal es una unidad y $j(E/\cal{K}')\in\cal{R}'$. Como
+	$E$ est\'{a} definida sobre $\cal{K}$, vale que
+	$j\in\cal{R}'\cap\cal{K}=\cal{R}$.
+\end{proof}
